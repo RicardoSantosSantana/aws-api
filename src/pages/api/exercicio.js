@@ -700,12 +700,7 @@ export default function exercicio(req, res) {
             "resposta": "B - O Amazon SNS   utiliza do paradigma pub/sub  (publisher e subscriber), que significa Editores e Assinantes (ou inscritos). O Editor cria um tópico e os Assinantes se inscrevem (ou assinam) neste tópico para receber notificações." 
         }
       ]
-      res.header("Access-Control-Allow-Origin", "*");
-      res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-      );
-      res.header("Access-Control-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
+ 
     res.status(200).json(data)
   }
   
