@@ -701,6 +701,9 @@ export default function exercicio(req, res) {
         }
       ]
  
-    res.status(200).json(data)
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.json(data);
+      
   }
   
