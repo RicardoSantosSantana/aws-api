@@ -1,5 +1,24 @@
 
-export default function exercicio(req, res) {
+import Cors from 'cors'
+
+// Initializing the cors middleware
+const cors = Cors({
+  methods: ['GET', 'HEAD'],
+})
+
+function runMiddleware(req, res, fn) {
+    return new Promise((resolve, reject) => {
+      fn(req, res, (result) => {
+        if (result instanceof Error) {
+          return reject(result)
+        }
+  
+        return resolve(result)
+      })
+    })
+  }
+
+async function exercicio(req, res) {
     const data = [
         {
          "pergunta": "Por que a AWS é mais econômica do que os datacenters tradicionais para aplicações com diferentes workloads de computação?",
@@ -700,6 +719,9 @@ export default function exercicio(req, res) {
             "resposta": "B - O Amazon SNS   utiliza do paradigma pub/sub  (publisher e subscriber), que significa Editores e Assinantes (ou inscritos). O Editor cria um tópico e os Assinantes se inscrevem (ou assinam) neste tópico para receber notificações." 
         }
       ]
-    res.status(200).json(data)
+    await runMiddleware(req,res)
+    res.json(data)
   }
+  
+  export default exercicio
   
