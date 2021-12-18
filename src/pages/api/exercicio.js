@@ -720,7 +720,7 @@ async function exercicio(req, res) {
         }
       ]
     await runMiddleware(req,res)
-    res.json(data)
+      res.status(200).json(data)
   }
   
   export default exercicio
