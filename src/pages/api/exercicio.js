@@ -1,5 +1,5 @@
 
-export default function exercicio(req, res) {
+export default function exercicio(req,res) {
     const data = [
         {
          "pergunta": "Por que a AWS é mais econômica do que os datacenters tradicionais para aplicações com diferentes workloads de computação?",
@@ -699,11 +699,9 @@ export default function exercicio(req, res) {
             ],
             "resposta": "B - O Amazon SNS   utiliza do paradigma pub/sub  (publisher e subscriber), que significa Editores e Assinantes (ou inscritos). O Editor cria um tópico e os Assinantes se inscrevem (ou assinam) neste tópico para receber notificações." 
         }
-      ]
- 
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.json(data);
+      ];
       
+
+    res.status(200).json(data)
   }
   

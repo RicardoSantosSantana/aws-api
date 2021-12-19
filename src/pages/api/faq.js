@@ -81,6 +81,20 @@ export default function faq(req, res) {
          ]
         },
         {
+         "categoria":"Planos de Suporte",
+         "pergunta":"Enterprise On-Ramp",
+         "resposta":[        
+             "Em <strong>Dezembro/2021</strong>, a AWS adicionou um novo plano de suporte; <strong>'Enterprise On-Ramp'</strong>.",
+             { 
+               "text":"Assim, teremos 05 planos de suporte: Basic, Developer, Business, Enterprise On-Ramp & Enterprise.",
+               "image":"onramp.jpeg"
+             } ,
+             "Segundo a política de certificação AWS, um novo produto, serviço ou recurso, deve estar disponível publicamente por seis meses antes de aparecer em um exame de certificação.",
+             "Por isso, até Julho de 2021, ainda haverá questões apenas com as nomenclaturas (Basic, Developer, Business e Enterprise)."
+             
+         ]
+        },
+        {
          "categoria":"Nível Gratuito",
          "pergunta":"Quando o nível gratuito da AWS expirará?",
          "resposta":[
